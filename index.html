@@ -26,7 +26,7 @@ h1.display{
 h1.display em{color:var(--gold-hover);font-style:normal;}
 h1.display .ul{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:5px;}
 h1.display .ln1,h1.display .ln2{display:block;}
-@media(min-width:600px){h1.display .ln1{white-space:nowrap;}}
+/* SBP headline is longer than the ScalingSOS original, so let it wrap (text-wrap:balance keeps it tidy) instead of forcing one line and overflowing. */
 
 /* ── PLAYER ── */
 .player{
@@ -98,7 +98,8 @@ h1.display .ln1,h1.display .ln2{display:block;}
 .research .eyb{font-size:clamp(11px,1.3vw,12.5px);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:clamp(9px,1.2vw,12px);}
 .research .names{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px 16px;}
 .research .names b{font-size:clamp(16px,2vw,20px);font-weight:800;color:var(--navy);}
-.research .names .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.7;}
+.research .names .dot{position:static;top:auto;left:auto;transform:none;box-shadow:none;pointer-events:none;width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.7;}
+.research .names .dot:hover,.research .names .dot.active{transform:none;background:var(--gold);}
 @media(max-width:520px){.research .names{gap:7px 12px;}}
 
 /* ── CAPTURE FORM (replaces CTA button) ── */
@@ -284,7 +285,7 @@ window.SSOS = {
       <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/thrst.jpg" alt="THRST website before and after redesign"/></figure>
       <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/parcelcube.jpg" alt="Parcelcube website before and after redesign"/></figure>
       <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/oma-organics.jpg?v=7" alt="OMA Organics website before and after redesign"/></figure>
-      <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/zubalenok.jpg" alt="Zubalenok Split Now or Never website before and after redesign"/></figure>
+      <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/zubalenok.jpg?v=2" alt="Zubalenok Split Now or Never website before and after redesign"/></figure>
       <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/rtt.jpg" alt="RTT website before and after redesign"/></figure>
       <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/eleni.jpg" alt="Eleni website before and after redesign"/></figure>
       <figure class="wall-card"><img loading="lazy" src="assets/wall-of-work/kendall.jpg" alt="Kendall Summerhawk website before and after redesign"/></figure>
