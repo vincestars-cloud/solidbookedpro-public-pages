@@ -86,23 +86,6 @@ h1.display .ln1,h1.display .ln2{display:block;}
 .volrow input[type=range]{flex:1;accent-color:var(--gold);}
 .setdiv{height:1px;background:rgba(255,255,255,.1);margin:6px 0;}
 
-/* ── BENEFIT STRIP (between VSL and form) ── */
-.benefits{max-width:600px;margin:clamp(26px,3.8vw,40px) auto 0;text-align:center;}
-.benefits .lead{font-size:clamp(19px,3.3vw,28px);font-weight:700;color:var(--navy);margin-bottom:clamp(15px,2.1vw,22px);letter-spacing:-.01em;}
-.benefits .lead span{color:#16a34a;}
-.benefits .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.8vw,18px) clamp(22px,3vw,36px);text-align:left;}
-@media(max-width:520px){.benefits .grid{grid-template-columns:1fr;max-width:320px;margin:0 auto;}}
-.benefits .item{display:flex;align-items:flex-start;gap:11px;font-size:clamp(15px,2.2vw,19px);font-weight:600;color:var(--navy);line-height:1.35;}
-.benefits .item svg{flex-shrink:0;width:clamp(22px,2.4vw,25px);height:clamp(22px,2.4vw,25px);margin-top:1px;}
-.research{background:var(--navy);margin-top:clamp(24px,3.4vw,38px);margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding:clamp(22px,3vw,34px) 18px;text-align:center;}
-.r-inner{max-width:760px;margin:0 auto;}
-.research .eyb{font-size:clamp(11px,1.3vw,12.5px);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#7aa7ff;margin-bottom:clamp(9px,1.2vw,12px);}
-.research .names{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px 16px;}
-.research .names b{font-size:clamp(16px,2vw,20px);font-weight:800;color:#fff;}
-.research .names .dot{position:static;top:auto;left:auto;transform:none;box-shadow:none;pointer-events:none;width:5px;height:5px;border-radius:50%;background:#7aa7ff;opacity:.8;}
-.research .names .dot:hover,.research .names .dot.active{transform:none;background:#7aa7ff;}
-@media(max-width:520px){.research .names{gap:7px 12px;}}
-
 /* ── CAPTURE FORM (replaces CTA button) ── */
 .capture{margin-top:clamp(22px,3.5vw,32px);max-width:620px;margin-left:auto;margin-right:auto;}
 .cap-h{text-align:center;font-size:clamp(19px,2.6vw,26px);font-weight:800;letter-spacing:-.02em;color:var(--navy);margin-bottom:4px;}
@@ -209,25 +192,6 @@ window.SSOS = {
       allowfullscreen="true"
       mozallowfullscreen="true"
       webkitallowfullscreen="true"></iframe>
-  </div>
-
-  <!-- BENEFIT STRIP -->
-  <div class="benefits">
-    <p class="lead">A <span>website</span> that&hellip;</p>
-    <div class="grid">
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Gets More Paying Customers</span>
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Increases your Google Ranking</span>
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Brings in Steady Referrals</span>
-      <span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>Follows Up Until They&rsquo;re Ready to Buy</span>
-    </div>
-  </div>
-
-  <!-- CREDIBILITY BAND -->
-  <div class="research">
-    <div class="r-inner">
-      <p class="eyb">Strategy Backed By Research From</p>
-      <div class="names"><b>Harvard</b><span class="dot"></span><b>Bain</b><span class="dot"></span><b>Google</b><span class="dot"></span><b>Gartner</b></div>
-    </div>
   </div>
 
   <!-- CAPTURE FORM -->
