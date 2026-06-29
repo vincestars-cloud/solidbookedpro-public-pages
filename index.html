@@ -30,11 +30,25 @@ h1.display .ln1,h1.display .ln2{display:block;}
 @media(min-width:600px){h1.display .ln1,h1.display .ln2{white-space:nowrap;}}
 
 /* ── PLAYER ── */
-.player{
-  position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:16px;overflow:hidden;
+.snap-deck{
+  width:min(100%,920px);height:100svh;margin:0 auto;background:#050505;border-radius:16px;
+  overflow-y:auto;overflow-x:hidden;scroll-snap-type:y mandatory;scroll-behavior:smooth;overscroll-behavior:contain;
   box-shadow:0 20px 60px rgba(10,31,58,.22),0 0 0 1px rgba(0,0,0,.08);user-select:none;
 }
-.player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000;display:block;}
+.snap-deck::-webkit-scrollbar{width:10px}
+.snap-deck::-webkit-scrollbar-track{background:#111}
+.snap-deck::-webkit-scrollbar-thumb{background:rgba(255,255,255,.35);border-radius:999px;border:2px solid #111}
+.snap-slide{
+  min-height:100svh;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;display:grid;place-items:center;padding:clamp(10px,2vw,22px);
+}
+.snap-slide img{display:block;width:100%;height:100%;object-fit:contain;background:#fff;border-radius:12px;box-shadow:0 10px 34px rgba(0,0,0,.28)}
+.snap-slide:focus{outline:3px solid var(--gold);outline-offset:-6px}
+@media(max-width:520px){
+  .snap-deck{border-radius:14px;height:100svh;max-height:none}
+  .snap-deck::-webkit-scrollbar{width:0}
+  .snap-slide{padding:8px}
+  .snap-slide img{border-radius:10px}
+}
 
 /* thin deceptive load bar pinned to very top — feels like a short video, no time shown */
 .loadbar{position:absolute;top:0;left:0;right:0;height:4px;background:rgba(255,255,255,.14);z-index:7;pointer-events:none;}
@@ -193,15 +207,31 @@ window.SSOS = {
     <h1 class="display"><span class="ln1">The <em>$99 Website</em> That <span class="ul">Books You Solid</span></span> <span class="ln2">&amp; Crushes $10k+ Marketing Budgets.</span></h1>
   </div>
 
-  <!-- PLAYER -->
-  <div class="player" id="player">
-    <iframe
-      src="https://docs.google.com/presentation/d/e/2PACX-1vSg_aUEMGwbVlLSZ-F5pjnhhs319u2oi7tKQ_16UjhSRyWwcOzfZQQhdhdpXJ55OLgkiL6RtLbhEx9f/pubembed?start=false&loop=false&delayms=3000"
-      title="SolidBookedPro website presentation"
-      loading="lazy"
-      allowfullscreen="true"
-      mozallowfullscreen="true"
-      webkitallowfullscreen="true"></iframe>
+  <!-- PRESENTATION -->
+  <div class="snap-deck" id="presentation" aria-label="SolidBookedPro presentation slides">
+    <section class="snap-slide" aria-label="Slide 1" tabindex="0"><img src="assets/slides/slide-01.svg" alt="Slide 1 of the SolidBookedPro presentation"/></section>
+    <section class="snap-slide" aria-label="Slide 2" tabindex="0"><img src="assets/slides/slide-02.svg" alt="Slide 2 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 3" tabindex="0"><img src="assets/slides/slide-03.svg" alt="Slide 3 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 4" tabindex="0"><img src="assets/slides/slide-04.svg" alt="Slide 4 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 5" tabindex="0"><img src="assets/slides/slide-05.svg" alt="Slide 5 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 6" tabindex="0"><img src="assets/slides/slide-06.svg" alt="Slide 6 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 7" tabindex="0"><img src="assets/slides/slide-07.svg" alt="Slide 7 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 8" tabindex="0"><img src="assets/slides/slide-08.svg" alt="Slide 8 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 9" tabindex="0"><img src="assets/slides/slide-09.svg" alt="Slide 9 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 10" tabindex="0"><img src="assets/slides/slide-10.svg" alt="Slide 10 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 11" tabindex="0"><img src="assets/slides/slide-11.svg" alt="Slide 11 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 12" tabindex="0"><img src="assets/slides/slide-12.svg" alt="Slide 12 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 13" tabindex="0"><img src="assets/slides/slide-13.svg" alt="Slide 13 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 14" tabindex="0"><img src="assets/slides/slide-14.svg" alt="Slide 14 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 15" tabindex="0"><img src="assets/slides/slide-15.svg" alt="Slide 15 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 16" tabindex="0"><img src="assets/slides/slide-16.svg" alt="Slide 16 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 17" tabindex="0"><img src="assets/slides/slide-17.svg" alt="Slide 17 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 18" tabindex="0"><img src="assets/slides/slide-18.svg" alt="Slide 18 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 19" tabindex="0"><img src="assets/slides/slide-19.svg" alt="Slide 19 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 20" tabindex="0"><img src="assets/slides/slide-20.svg" alt="Slide 20 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 21" tabindex="0"><img src="assets/slides/slide-21.svg" alt="Slide 21 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 22" tabindex="0"><img src="assets/slides/slide-22.svg" alt="Slide 22 of the SolidBookedPro presentation" loading="lazy"/></section>
+    <section class="snap-slide" aria-label="Slide 23" tabindex="0"><img src="assets/slides/slide-23.svg" alt="Slide 23 of the SolidBookedPro presentation" loading="lazy"/></section>
   </div>
 
   <!-- BENEFIT STRIP -->
