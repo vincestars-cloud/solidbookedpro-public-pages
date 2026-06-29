@@ -67,15 +67,16 @@ footer{padding:18px;text-align:center;font-size:12px;color:rgba(15,23,42,.3);}
 <div class="wrap">
   <div class="box">
 
-    <h1>What if every happy customer left you a<br><em>5-star review</em> — automatically?</h1>
+    <h1>What if your site collected reviews<br><em>and answered calls</em> for you?</h1>
 
-    <p class="truism">92% of people read your reviews before they ever call.</p>
-    <p class="bridge">Your new website brings them to your door. Automatic review requests turn them into the proof that brings the next ten.</p>
+    <p class="truism">Getting found is only the start.</p>
+    <p class="bridge">Add automatic review requests plus a 24/7 receptionist, so more people choose you and fewer calls slip away.</p>
 
     <div class="phone">
       <div class="phone-screen">
-        <div class="bubble">Hi Jessica, we hope you enjoyed your experience! Would you mind taking a moment to leave a review? Here's the link: <span class="lnk">&lt;Review Link&gt;</span></div>
-        <div class="reply">Just left a review — thanks for the great work!</div>
+        <div class="bubble">Hi Jessica, glad we could help today. Mind leaving a quick review? <span class="lnk">&lt;Review Link&gt;</span></div>
+        <div class="reply">Just left a review — thanks!</div>
+        <div class="bubble">Missed call captured: new customer needs service tomorrow.</div>
       </div>
     </div>
 
@@ -83,43 +84,50 @@ footer{padding:18px;text-align:center;font-size:12px;color:rgba(15,23,42,.3);}
       <div class="stack-item">
         <div>
           <div class="stack-name">Automatic Review Requests</div>
-          <div class="stack-desc">Texts every customer your review link right after the job</div>
+          <div class="stack-desc">Texts customers your review link after the job</div>
         </div>
         <div class="stack-val">$199<small>/mo</small></div>
       </div>
       <div class="stack-item">
         <div>
-          <div class="stack-name">Smart Follow-Ups</div>
-          <div class="stack-desc">Gentle reminders that recover the reviews people forget</div>
+          <div class="stack-name">Smart Review Follow-Ups</div>
+          <div class="stack-desc">Gentle reminders for customers who forget</div>
         </div>
         <div class="stack-val">$99<small>/mo</small></div>
       </div>
       <div class="stack-item">
         <div>
-          <div class="stack-name">Past-Customer Import</div>
-          <div class="stack-desc">Upload your customer list and request reviews in bulk</div>
+          <div class="stack-name">24/7 AI Receptionist</div>
+          <div class="stack-desc">Answers missed calls, nights, weekends, and busy moments</div>
         </div>
-        <div class="stack-val">$149<small>one time</small></div>
+        <div class="stack-val">$399<small>/mo</small></div>
+      </div>
+      <div class="stack-item">
+        <div>
+          <div class="stack-name">Lead Capture Notes</div>
+          <div class="stack-desc">Captures caller name, number, and job details</div>
+        </div>
+        <div class="stack-val">$149<small>/mo</small></div>
       </div>
       <div class="stack-footer">
         <div class="stack-compare">
-          <span class="stack-compare-label">Tools like this run</span>
-          <span class="stack-compare-val">$298/mo ($3,576/yr)</span>
+          <span class="stack-compare-label">Combined monthly cost elsewhere</span>
+          <span class="stack-compare-val">$846/mo ($10,152/yr)</span>
         </div>
         <div class="stack-today">
           <span class="stack-today-label">Your price today</span>
-          <span class="stack-today-val">$99<small>one time</small></span>
+          <span class="stack-today-val">$297<small>one time</small></span>
         </div>
       </div>
     </div>
 
-    <p class="math">A few more 5-star reviews is the difference between getting found and getting skipped.</p>
+    <p class="math">One missed call or one extra review-backed job can pay for this.</p>
 
-    <p class="yes-q">Add it now and your reviews start growing on autopilot the day your site goes live — for $99 once?</p>
+    <p class="yes-q">Add reviews plus the 24/7 receptionist now — for $297 once?</p>
 
     <div class="err" id="err"></div>
-    <button class="add" id="addBtn" onclick="addUpsell()">Yes — Add Reviews Request · $99</button>
-    <button class="skip" onclick="skip()">No thanks — I'll chase reviews myself</button>
+    <button class="add" id="addBtn" onclick="addUpsell()">Yes — Add Reviews + 24/7 Receptionist · $297</button>
+    <button class="skip" onclick="skip()">No thanks — I'll handle reviews and missed calls myself</button>
 
   </div>
 </div>
@@ -133,16 +141,16 @@ window.SBP = { N8N:'https://n8n.americanlifeteam.com/webhook' };
   try{ if(sessionId) localStorage.setItem('ssos_checkout_session', sessionId); else sessionId=localStorage.getItem('ssos_checkout_session')||''; }catch(e){}
   // confirm website paid + capture email for the account
   if(sessionId){ fetch(N8N+'/sbp-funnel-order?session_id='+encodeURIComponent(sessionId)).then(function(r){return r.json()}).then(function(d){ if(d&&d.email){ try{localStorage.setItem('ssos_email',d.email);}catch(e){} } }).catch(function(){}); }
-  function nextUrl(extra){ var em=''; try{em=localStorage.getItem('ssos_email')||''}catch(e){} return '/upsell2/?session_id='+encodeURIComponent(sessionId)+(em?'&email='+encodeURIComponent(em):'')+(extra||''); }
+  function nextUrl(extra){ var em=''; try{em=localStorage.getItem('ssos_email')||''}catch(e){} return '/setup/?session_id='+encodeURIComponent(sessionId)+(em?'&email='+encodeURIComponent(em):'')+(extra||''); }
   window.skip=function(){ location.href=nextUrl(''); };
   window.addUpsell=function(){
     var btn=document.getElementById('addBtn'), err=document.getElementById('err');
     err.style.display='none'; btn.disabled=true; btn.textContent='Adding to your order…';
-    fetch(N8N+'/sbp-reviews-charge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sessionId,product:'sbp_reviews_99'})})
+    fetch(N8N+'/sbp-reviews-charge',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({session_id:sessionId,product:'sbp_growth_addon_297'})})
       .then(function(r){return r.json()}).then(function(d){
-        if(d&&d.ok){ try{localStorage.setItem('sbp_bought_reviews','1')}catch(e){} location.href=nextUrl('&reviews=1'); }
-        else{ err.textContent=(d&&d.error)||'Could not add it right now. Your website order is safe.'; err.style.display='block'; btn.disabled=false; btn.textContent='Yes — Add Reviews Request · $99'; }
-      }).catch(function(){ err.textContent='Network error. Your website order is safe.'; err.style.display='block'; btn.disabled=false; btn.textContent='Yes — Add Reviews Request · $99'; });
+        if(d&&d.ok){ try{localStorage.setItem('sbp_bought_reviews','1');localStorage.setItem('sbp_bought_receptionist','1')}catch(e){} location.href=nextUrl('&reviews=1&receptionist=1'); }
+        else{ err.textContent=(d&&d.error)||'Could not add it right now. Your website order is safe.'; err.style.display='block'; btn.disabled=false; btn.textContent='Yes — Add Reviews + 24/7 Receptionist · $297'; }
+      }).catch(function(){ err.textContent='Network error. Your website order is safe.'; err.style.display='block'; btn.disabled=false; btn.textContent='Yes — Add Reviews + 24/7 Receptionist · $297'; });
   };
 })();
 </script>
