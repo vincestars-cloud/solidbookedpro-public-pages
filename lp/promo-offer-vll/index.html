@@ -9,53 +9,521 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/qualify.css">
 </head>
-<body class="optin-body">
-  <main class="optin-page">
-    <section class="optin-hero">
-      <div class="optin-copy">
-        <a class="optin-logo" href="../../"><img src="../../assets/logo.png" alt="SolidBooked Pro"></a>
-        <p class="eyebrow">Free Qualification Call</p>
-        <h1>Find out if your market can support pay-per-show annuity appointments.</h1>
-        <p>Answer a few questions about your licensing, calendar capacity, and ideal annuity prospect. If there is a fit, we will show you how the appointment system would work in your market.</p>
-        <div class="optin-points">
-          <div><b>1</b><span>Only pay for appointments that actually show up</span></div>
-          <div><b>2</b><span>Prospects are pre-educated before they book</span></div>
-          <div><b>3</b><span>No-show appointments are replaced</span></div>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="q-nav">
+  <div class="q-nav-inner">
+    <a class="q-brand" href="../../" aria-label="SolidBooked Pro home"><img src="../../assets/logo.png" alt="SolidBooked Pro"></a>
+    <nav class="q-nav-links" aria-label="Primary navigation">
+      <a href="../../">Home</a>
+      <a href="../../how-it-works/">How It Works</a>
+      <a href="../../#wins">Wins</a>
+      <a href="../../#about">About Us</a>
+      <a href="../../#careers">Careers</a>
+    </nav>
+    <a class="q-nav-cta" href="#qualify">Book a Call</a>
+  </div>
+</header>
+
+<main>
+  <!-- ===================== HERO ===================== -->
+  <section class="q-hero">
+    <div class="q-shell">
+      <span class="q-badge"><span class="q-badge-dot"></span>Limited Availability</span>
+      <h1>Find out if your market can support <span class="q-accent">pay-per-show</span> annuity appointments.</h1>
+      <p class="q-hero-lead">Answer a few questions about your licensing, calendar capacity, and ideal annuity prospect. If there is a fit, we will show you how the appointment system would work in your market.</p>
+    </div>
+  </section>
+
+  <!-- ===================== BENEFITS + FORM ===================== -->
+  <section class="q-main" id="qualify">
+    <div class="q-shell">
+      <div class="q-grid">
+
+        <!-- ---------- left: what you get + proof ---------- -->
+        <div class="q-benefits">
+          <h2>What You Get With Pay-Per-Show</h2>
+          <p class="q-benefits-sub">You only pay for appointments that show up.</p>
+
+          <ul class="q-benefit-list">
+            <li class="q-benefit">
+              <span class="q-benefit-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/></svg>
+              </span>
+              <p>Only pay for appointments that actually show up on your calendar</p>
+            </li>
+            <li class="q-benefit">
+              <span class="q-benefit-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20v-1.6a3.4 3.4 0 0 0-3.4-3.4H6.4A3.4 3.4 0 0 0 3 18.4V20"/><circle cx="9.5" cy="7.5" r="3.4"/><path d="M21 20v-1.6a3.4 3.4 0 0 0-2.6-3.3M16.2 4.3a3.4 3.4 0 0 1 0 6.4"/></svg>
+              </span>
+              <p>Prospects are pre-educated on annuities before they book</p>
+            </li>
+            <li class="q-benefit">
+              <span class="q-benefit-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.4"/><path d="M21 4v5h-5"/></svg>
+              </span>
+              <p>No-show appointments are replaced</p>
+            </li>
+
+            <!-- PLACEHOLDER SLOTS — mirrors the 5-item layout on the reference page.
+                 Replace the copy, remove `is-placeholder`, then delete this comment. -->
+            <li class="q-benefit is-placeholder">
+              <span class="q-benefit-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7.5-4.2 7.5-10V5.6L12 3 4.5 5.6V11c0 5.8 7.5 10 7.5 10Z"/><path d="m9.2 11.8 2 2 3.6-3.8"/></svg>
+              </span>
+              <p>Placeholder &mdash; prospect qualification criteria (e.g. minimum investable assets)</p>
+            </li>
+            <li class="q-benefit is-placeholder">
+              <span class="q-benefit-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17.5 9 11l4 4 7.5-7.5"/><path d="M15 7.5h5.5V13"/></svg>
+              </span>
+              <p>Placeholder &mdash; economics proof point (e.g. average commission per closed case)</p>
+            </li>
+          </ul>
+
+          <!-- ---------- rating row (PLACEHOLDER) ---------- -->
+          <div class="q-rating">
+            <span class="q-stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+            </span>
+            <span class="q-rating-text"><strong>[RATING]</strong> on [REVIEW PLATFORM] &middot; [N] reviews</span>
+          </div>
+
+          <!-- ---------- testimonial card (PLACEHOLDER) ---------- -->
+          <div class="q-testimonial">
+            <span class="q-placeholder-tag">Placeholder &mdash; swap in a real review</span>
+            <span class="q-stars q-stars-amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="m12 2.6 2.9 5.9 6.5.95-4.7 4.6 1.1 6.5L12 17.5l-5.8 3.05 1.1-6.5-4.7-4.6 6.5-.95z"/></svg>
+            </span>
+            <p class="q-quote">&ldquo;[Paste a real, verifiable client quote here. Two to four sentences works best &mdash; what they tried before, what changed, and one specific number.]&rdquo;</p>
+            <div class="q-author">
+              <span class="q-avatar" aria-hidden="true">AB</span>
+              <div>
+                <div class="q-author-name">[Client name]</div>
+                <div class="q-author-meta">[Verified on review platform]</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---------- right: multi-step qualification form ---------- -->
+        <div class="q-card">
+          <div class="q-progress-row"><span class="q-progress-pct" id="qPct">14%</span></div>
+          <div class="q-progress" role="progressbar" aria-label="Application progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="14" id="qProgress">
+            <div class="q-progress-bar" id="qBar"></div>
+          </div>
+
+          <form id="qForm" novalidate>
+            <div id="qHost" aria-live="polite"></div>
+          </form>
+
+          <noscript>
+            <p style="margin:0 0 14px;color:#475569;font-size:14px">This short application needs JavaScript. You can email us directly instead:</p>
+            <a class="q-continue" style="margin-left:0;text-decoration:none" href="mailto:info@solidbookedpro.com?subject=Annuity%20appointment%20availability">Email info@solidbookedpro.com</a>
+          </noscript>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="q-footer">
+  <div class="q-shell">
+    <div class="q-footer-grid">
+      <div class="q-footer-brand-col">
+        <a class="q-footer-brand" href="../../" aria-label="SolidBooked Pro home"><img src="../../assets/logo.png" alt="SolidBooked Pro"></a>
+        <p class="q-footer-desc">Pay-per-show annuity appointments with qualified, pre-educated retirement prospects.</p>
+        <div class="q-social" id="qSocial" hidden>
+          <a href="#" data-social="youtube" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="m10.5 9.2 4.6 2.8-4.6 2.8z"/></svg></a>
+          <a href="#" data-social="instagram" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+          <a href="#" data-social="linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17M7.5 7.4v.1M11.5 17v-3.6a2.2 2.2 0 0 1 4.4 0V17"/></svg></a>
         </div>
       </div>
 
-      <form class="optin-card" action="mailto:info@solidbookedpro.com" method="post" enctype="text/plain">
-        <div class="form-head">
-          <span>Step 1 of 1</span>
-          <h2>Check Availability</h2>
-          <p>Complete the short application below.</p>
+      <div>
+        <h4 class="q-col-head">Navigation</h4>
+        <div class="q-col-list">
+          <a href="../../">Home</a>
+          <a href="../../how-it-works/">How It Works</a>
+          <a href="../../#wins">Wins &amp; Testimonials</a>
+          <a href="../../#about">About Us</a>
+          <a href="../../#careers">Careers</a>
+          <a href="#qualify">Book a Call</a>
         </div>
-        <label>First and Last Name<input name="Name" type="text" placeholder="John Smith" required></label>
-        <label>Email Address<input name="Email" type="email" placeholder="john@example.com" required></label>
-        <label>Phone Number<input name="Phone" type="tel" placeholder="(555) 123-4567" required></label>
-        <label>Agency / Company<input name="Company" type="text" placeholder="Your agency name"></label>
-        <label>Licensed States<input name="Licensed States" type="text" placeholder="FL, TX, AZ..."></label>
-        <label>How many appointments could you take per month?
-          <select name="Monthly Appointment Capacity" required>
-            <option value="">Select one</option>
-            <option>5-10 appointments</option>
-            <option>10-25 appointments</option>
-            <option>25+ appointments</option>
-          </select>
-        </label>
-        <label>What annuity prospect are you trying to reach?
-          <textarea name="Prospect Profile" rows="4" placeholder="Example: retirees with $250K+ rollover assets who want protected income."></textarea>
-        </label>
-        <label class="consent">
-          <input name="SMS Consent" type="checkbox" value="Yes">
-          <span>I agree to receive follow-up by email, phone, or SMS about SolidBooked Pro appointment availability. Message and data rates may apply. Reply STOP to unsubscribe.</span>
-        </label>
-        <button class="btn primary form-btn" type="submit">See If I Qualify</button>
-        <p class="fine-print">Your information is used to evaluate fit and follow up about appointment availability.</p>
-      </form>
-    </section>
-  </main>
+      </div>
+
+      <div>
+        <h4 class="q-col-head">Contact</h4>
+        <div class="q-col-list">
+          <a href="mailto:info@solidbookedpro.com">info@solidbookedpro.com</a>
+          <span id="qLocation" hidden></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="q-footer-bottom">
+      <span>&copy; <span id="qYear">2026</span> SolidBooked Pro. All rights reserved.</span>
+      <span class="q-legal" id="qLegal" hidden></span>
+      <span id="qEntity" hidden></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ======================================================================
+     PAGE CONFIG — the only thing you need to edit.
+     Leave a value as '' and its element stays hidden (no dead links ship).
+     ====================================================================== */
+  var PAGE_CONFIG = {
+    // Where the completed application is POSTed as JSON (e.g. an n8n webhook).
+    // While this is '' the form falls back to opening a pre-filled email.
+    FORM_ENDPOINT: '',
+    FALLBACK_EMAIL: 'info@solidbookedpro.com',
+
+    SOCIAL:   { youtube: '', instagram: '', linkedin: '' },
+    LEGAL:    { privacy: '', terms: '' },
+    LOCATION: '',
+    ENTITY:   ''
+  };
+
+  /* ======================================================================
+     STEPS — business context first, personal details last.
+     7 steps, so step 1 = 14% (matches the reference page).
+     ====================================================================== */
+  var STEPS = [
+    {
+      key: 'capacity', type: 'choice', required: true,
+      q: 'How many appointments could you take per month?',
+      hint: 'Select one',
+      options: ['5-10 appointments', '10-25 appointments', '25+ appointments']
+    },
+    {
+      key: 'states', type: 'text', required: true,
+      q: 'Which states are you licensed in?',
+      hint: 'List every state you can write business in today.',
+      ph: 'FL, TX, AZ...'
+    },
+    {
+      key: 'prospect', type: 'textarea', required: true,
+      q: 'What annuity prospect are you trying to reach?',
+      hint: 'The more specific you are, the better we can match your market.',
+      ph: 'Example: retirees with $250K+ rollover assets who want protected income.'
+    },
+    {
+      key: 'company', type: 'text', required: false,
+      q: 'What is your agency or company name?',
+      hint: 'Optional — skip it if you write independently.',
+      ph: 'Your agency name'
+    },
+    {
+      key: 'name', type: 'text', required: true,
+      q: 'What is your first and last name?',
+      ph: 'John Smith'
+    },
+    {
+      key: 'email', type: 'email', required: true,
+      q: 'What email should we send your availability to?',
+      ph: 'john@example.com',
+      note: 'No spam. Ever.', noteIcon: 'lock'
+    },
+    {
+      key: 'phone', type: 'tel', required: true,
+      q: 'What is the best number to reach you on?',
+      hint: 'We use this to confirm licensing and walk you through the appointment flow.',
+      ph: '(555) 123-4567',
+      note: 'Never shared. Never sold.', noteIcon: 'lock',
+      consent: true, last: true
+    }
+  ];
+
+  var TOTAL = STEPS.length;
+  var state = { step: 1, data: {}, sending: false };
+
+  var host = document.getElementById('qHost');
+  var form = document.getElementById('qForm');
+  var bar  = document.getElementById('qBar');
+  var pct  = document.getElementById('qPct');
+  var prog = document.getElementById('qProgress');
+
+  var ICONS = {
+    lock:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="10.5" width="15" height="10" rx="2.5"/><path d="M8 10.5V7.8a4 4 0 0 1 8 0v2.7"/></svg>',
+    arrowR:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg>',
+    arrowL:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12h-15M10.5 6l-6 6 6 6"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m4.5 12.5 5 5 10-11"/></svg>'
+  };
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function setProgress(p) {
+    if (p == null) p = Math.round((state.step / TOTAL) * 100);
+    bar.style.transform = 'scaleX(' + (p / 100) + ')';
+    pct.textContent = p + '%';
+    prog.setAttribute('aria-valuenow', String(p));
+  }
+
+  /* ---------- render ---------- */
+  function render() {
+    var s = STEPS[state.step - 1];
+    var saved = state.data[s.key] || '';
+    var html = '';
+
+    html += '<div class="q-step">';
+    html += '<h3>' + esc(s.q) + '</h3>';
+    if (s.hint) html += '<p class="q-step-hint">' + esc(s.hint) + '</p>';
+
+    if (s.type === 'choice') {
+      html += '<div class="q-options" role="radiogroup" aria-label="' + esc(s.q) + '">';
+      s.options.forEach(function (opt) {
+        html += '<button type="button" class="q-option" role="radio" data-opt="' + esc(opt) + '"'
+             +  ' aria-checked="' + (saved === opt ? 'true' : 'false') + '">'
+             +  '<span class="q-option-radio" aria-hidden="true"></span><span>' + esc(opt) + '</span></button>';
+      });
+      html += '</div>';
+    } else if (s.type === 'textarea') {
+      html += '<div class="q-field"><textarea id="qInput" rows="4" placeholder="' + esc(s.ph || '') + '">' + esc(saved) + '</textarea></div>';
+    } else {
+      html += '<div class="q-field"><input id="qInput" type="' + s.type + '" value="' + esc(saved) + '" placeholder="' + esc(s.ph || '') + '"'
+           +  (s.type === 'email' ? ' autocomplete="email" inputmode="email"' : '')
+           +  (s.type === 'tel' ? ' autocomplete="tel" inputmode="tel"' : '')
+           +  (s.key === 'name' ? ' autocomplete="name"' : '')
+           +  '></div>';
+    }
+
+    if (s.note) {
+      html += '<p class="q-note">' + (s.noteIcon ? ICONS[s.noteIcon] : '') + esc(s.note) + '</p>';
+    }
+    html += '<p class="q-error" id="qError" hidden></p>';
+
+    if (s.consent) {
+      html += '<label class="q-consent"><input type="checkbox" id="qConsent"' + (state.data.consent ? ' checked' : '') + '>'
+           +  '<span>I agree to receive follow-up by email, phone, or SMS about SolidBooked Pro appointment availability. '
+           +  'Message and data rates may apply. Reply STOP to unsubscribe.</span></label>';
+    }
+
+    html += '<div class="q-actions">';
+    html += '<button type="button" class="q-back" id="qBack"' + (state.step === 1 ? ' hidden' : '') + '>' + ICONS.arrowL + 'Back</button>';
+    html += '<button type="submit" class="q-continue" id="qNext">'
+         +  (s.last ? 'See If I Qualify' : 'Continue') + ICONS.arrowR + '</button>';
+    html += '</div>';
+
+    if (s.last) {
+      html += '<p class="q-assure">Takes about 30 seconds. We only follow up about appointment availability.</p>';
+    }
+    html += '</div>';
+
+    host.innerHTML = html;
+    setProgress();
+    wire(s);
+  }
+
+  // Persist whatever is currently typed, valid or not. Without this a value that
+  // failed validation (or a sibling field's validation) is lost on Back.
+  function stash(s) {
+    if (s.type === 'choice') return;
+    var input = document.getElementById('qInput');
+    if (input) state.data[s.key] = input.value;
+    var c = document.getElementById('qConsent');
+    if (c) state.data.consent = c.checked;
+  }
+
+  function wire(s) {
+    var back = document.getElementById('qBack');
+    if (back) back.addEventListener('click', function () {
+      stash(s);
+      if (state.step > 1) { state.step--; render(); }
+    });
+
+    if (s.type === 'choice') {
+      Array.prototype.forEach.call(host.querySelectorAll('.q-option'), function (btn) {
+        btn.addEventListener('click', function () {
+          Array.prototype.forEach.call(host.querySelectorAll('.q-option'), function (b) {
+            b.setAttribute('aria-checked', 'false');
+          });
+          btn.setAttribute('aria-checked', 'true');
+          state.data[s.key] = btn.getAttribute('data-opt');
+          hideError();
+          setTimeout(function () { advance(); }, 320); // auto-advance on select
+        });
+      });
+    } else {
+      var input = document.getElementById('qInput');
+      if (input) {
+        input.focus({ preventScroll: true });
+        input.addEventListener('input', function () { hideError(); stash(s); });
+        if (s.type !== 'textarea') {
+          input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') { e.preventDefault(); submitStep(); }
+          });
+        }
+      }
+    }
+
+    var consent = document.getElementById('qConsent');
+    if (consent) consent.addEventListener('change', function () {
+      state.data.consent = consent.checked;
+      if (consent.checked) hideError();
+    });
+  }
+
+  function hideError() {
+    var e = document.getElementById('qError');
+    if (e) { e.hidden = true; e.textContent = ''; }
+    var f = host.querySelector('.q-field');
+    if (f) f.classList.remove('has-error');
+  }
+
+  function showError(msg) {
+    var e = document.getElementById('qError');
+    if (e) { e.textContent = msg; e.hidden = false; }
+    var f = host.querySelector('.q-field');
+    if (f) f.classList.add('has-error');
+  }
+
+  /* ---------- validation ---------- */
+  function readStep(s) {
+    if (s.type === 'choice') return state.data[s.key] || '';
+    var input = document.getElementById('qInput');
+    return input ? input.value.trim() : '';
+  }
+
+  function validate(s, val) {
+    if (s.required && !val) return 'This one is required to check your market.';
+    if (s.type === 'email' && val && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) return 'That email does not look right.';
+    if (s.type === 'tel' && val && val.replace(/\D/g, '').length < 10) return 'Please enter a full 10-digit phone number.';
+    if (s.consent && !document.getElementById('qConsent').checked) return 'Please agree to be contacted so we can follow up.';
+    return '';
+  }
+
+  function submitStep() {
+    var s = STEPS[state.step - 1];
+    var val = readStep(s);
+    var err = validate(s, val);
+    if (err) { showError(err); return; }
+    state.data[s.key] = val;
+    if (s.consent) state.data.consent = document.getElementById('qConsent').checked;
+    advance();
+  }
+
+  function advance() {
+    if (state.step < TOTAL) { state.step++; render(); }
+    else send();
+  }
+
+  /* ---------- submit ---------- */
+  function payload() {
+    return {
+      source: 'annuity.solidbookedpro.com/lp/promo-offer-vll',
+      submitted_at: new Date().toISOString(),
+      name: state.data.name || '',
+      email: state.data.email || '',
+      phone: state.data.phone || '',
+      company: state.data.company || '',
+      licensed_states: state.data.states || '',
+      monthly_capacity: state.data.capacity || '',
+      prospect_profile: state.data.prospect || '',
+      sms_consent: !!state.data.consent
+    };
+  }
+
+  function mailtoFallback(p) {
+    var body = Object.keys(p).map(function (k) { return k + ': ' + p[k]; }).join('\n');
+    window.location.href = 'mailto:' + PAGE_CONFIG.FALLBACK_EMAIL
+      + '?subject=' + encodeURIComponent('Annuity appointment application — ' + (p.name || 'new applicant'))
+      + '&body=' + encodeURIComponent(body);
+  }
+
+  function send() {
+    if (state.sending) return;
+    state.sending = true;
+    var p = payload();
+
+    function done() { state.sending = false; renderDone(); }
+
+    if (PAGE_CONFIG.FORM_ENDPOINT) {
+      fetch(PAGE_CONFIG.FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(p)
+      }).then(function (r) {
+        if (!r.ok) throw new Error('bad status ' + r.status);
+        done();
+      })['catch'](function () { mailtoFallback(p); done(); });
+    } else {
+      mailtoFallback(p);
+      done();
+    }
+  }
+
+  function renderDone() {
+    setProgress(100);
+    host.innerHTML =
+      '<div class="q-done">'
+      + '<div class="q-done-ico" aria-hidden="true">' + ICONS.check + '</div>'
+      + '<h3>Application received</h3>'
+      + '<p>We are checking appointment availability in your licensed states. Expect to hear from us within one business day.</p>'
+      + '</div>';
+  }
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); submitStep(); });
+
+  /* ---------- config-driven footer bits ---------- */
+  function applyConfig() {
+    var y = document.getElementById('qYear');
+    if (y) y.textContent = String(new Date().getFullYear());
+
+    var socialWrap = document.getElementById('qSocial');
+    var anySocial = false;
+    Array.prototype.forEach.call(socialWrap.querySelectorAll('a'), function (a) {
+      var url = PAGE_CONFIG.SOCIAL[a.getAttribute('data-social')];
+      if (url) { a.href = url; a.rel = 'noopener'; a.target = '_blank'; anySocial = true; }
+      else { a.parentNode.removeChild(a); }
+    });
+    socialWrap.hidden = !anySocial;
+
+    var loc = document.getElementById('qLocation');
+    if (PAGE_CONFIG.LOCATION) { loc.textContent = PAGE_CONFIG.LOCATION; loc.hidden = false; }
+
+    var legal = document.getElementById('qLegal');
+    var parts = [];
+    if (PAGE_CONFIG.LEGAL.privacy) parts.push('<a href="' + PAGE_CONFIG.LEGAL.privacy + '">Privacy Policy</a>');
+    if (PAGE_CONFIG.LEGAL.terms) parts.push('<a href="' + PAGE_CONFIG.LEGAL.terms + '">Terms of Service</a>');
+    if (parts.length) { legal.innerHTML = parts.join('<span>&middot;</span>'); legal.hidden = false; }
+
+    var ent = document.getElementById('qEntity');
+    if (PAGE_CONFIG.ENTITY) { ent.textContent = PAGE_CONFIG.ENTITY; ent.hidden = false; }
+  }
+
+  /* ---------- init (always resets state) ---------- */
+  function init() {
+    state.step = 1;
+    state.data = {};
+    state.sending = false;
+    applyConfig();
+    render();
+  }
+
+  init();
+})();
+</script>
 </body>
 </html>
